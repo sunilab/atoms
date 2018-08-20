@@ -3,7 +3,6 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
-    mode: 'development',
     module: {
         rules: [
             {
@@ -14,9 +13,14 @@ module.exports = {
             }
         ]
     },
+    devtool: 'cheap-module-source-map',
     resolve: { extensions: ['*', '.js', '.jsx'] },
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        filename: 'atoms.js'
+        filename: 'atoms.js',
+        // the library and libraryTarget are required since this is a library that is used by other
+        // applications. If we dont add these keys, the import does not work.
+        library: 'atoms',
+        libraryTarget: 'umd'
     }
 };

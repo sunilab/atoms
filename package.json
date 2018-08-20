@@ -1,11 +1,12 @@
 {
-  "name": "atoms",
+  "name": "@phyxius/atoms",
   "version": "0.0.1",
   "description": "Basic building blocks for web applications",
-  "main": "index.js",
+  "main": "dist/atoms.js",
   "scripts": {
     "test": "npm test",
-    "build": "webpack --mode development"
+    "build": "webpack",
+    "storybook": "start-storybook -p 9001 -c ./storybook/.storybook"
   },
   "repository": {
     "type": "git",
@@ -18,15 +19,20 @@
   },
   "homepage": "https://github.com/sunilab/atoms#readme",
   "devDependencies": {
+    "@storybook/react": "^3.4.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^4.16.5",
+    "webpack": "^3.12.0",
     "webpack-cli": "^3.1.0"
   },
   "peerDependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2"
+  },
+  "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   }
