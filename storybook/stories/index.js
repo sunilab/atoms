@@ -5,7 +5,7 @@ import { Textbox, Button, Label } from '../../src';
 
 storiesOf('Textbox', module)
     .add('with Text', () => (
-        <Textbox password={true} />
+        <Textbox password={true} changeHandler={action('Textbox change')} />
     ));
 
 storiesOf('Button', module)
