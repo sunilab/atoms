@@ -7,7 +7,7 @@ class Textbox extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
     render () {
-        const {password, ...rest} = this.props;
+        const {password, changeHandler, ...rest} = this.props;
         return (
             <input onInput={this.handleInput} onChange={this.handleChange} type={password ? 'password' : 'text'} {...rest}/>
         );
