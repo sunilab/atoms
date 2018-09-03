@@ -1,6 +1,6 @@
 {
   "name": "@phyxius/atoms",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Basic building blocks for web applications",
   "main": "dist/atoms.js",
   "scripts": {
