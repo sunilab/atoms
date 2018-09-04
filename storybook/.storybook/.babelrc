@@ -1,5 +1,5 @@
 {
-    "presets": ["env", "react", "stage-3"],
+    "presets": ["react", "env", "stage-3"],
     "plugins": [
         ["styled-components", { "ssr": false, "displayName": true, "preprocess": false }]
     ]

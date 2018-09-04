@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 class Grid extends React.Component {
-    displayName: 'Grid'
     render () {
         return (
             <div className={this.props.className}>
@@ -11,6 +10,8 @@ class Grid extends React.Component {
         );
     }
 }
+
+Grid.displayName = 'Grid';
 
 Grid = styled(Grid)`
     display: grid;

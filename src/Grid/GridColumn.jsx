@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 class GridColumn extends React.Component {
-    displayName: 'GridColumn'
-
     render () {
         return (
             <div className={this.props.className}>
@@ -13,6 +11,8 @@ class GridColumn extends React.Component {
         );
     }
 }
+
+GridColumn.displayName = 'GridColumn';
 
 GridColumn = styled(GridColumn)`
     grid-column-start: ${props => props.startIndex};

@@ -5,8 +5,6 @@ class GridRow extends React.Component {
         super();
         this.renderChildren = this.renderChildren.bind(this);
     }
-    
-    displayName: 'GridRow'
 
     /**
      * Adds logic to assign the start and end index for the columns. These values are passed to the GridColumn
@@ -29,7 +27,7 @@ class GridRow extends React.Component {
             });
         });
     }
-    
+
     render () {
         return (
             <React.Fragment>
@@ -38,5 +36,7 @@ class GridRow extends React.Component {
         );
     }
 }
+
+GridRow.displayName = 'GridRow';
 
 export default GridRow;
