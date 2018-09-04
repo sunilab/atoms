@@ -19,6 +19,7 @@ Grid = styled(Grid)`
     grid-template-columns: repeat(12, 1fr);
     -ms-grid-columns: (1fr)[12];
     column-gap: 12px; // TODO: should be a variable
+    width: 100%;
 `;
 
 export default Grid;
