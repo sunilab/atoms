@@ -22,4 +22,5 @@ Grid = styled(Grid)`
     width: 100%;
 `;
 
+/** @component */
 export default Grid;

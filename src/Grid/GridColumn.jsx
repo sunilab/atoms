@@ -26,4 +26,5 @@ GridColumn.propTypes = {
     size: PropTypes.number
 };
 
+/** @component */
 export default GridColumn;

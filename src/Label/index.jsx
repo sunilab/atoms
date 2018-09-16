@@ -9,4 +9,5 @@ class Label extends Component {
     }
 }
 
+/** @Component */
 export default Label;

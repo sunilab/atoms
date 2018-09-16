@@ -8,4 +8,5 @@ class Button extends Component {
     }
 };
 
+/** @Component */
 export default Button;

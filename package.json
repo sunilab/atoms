@@ -5,8 +5,10 @@
   "main": "dist/atoms.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack",
-    "storybook": "start-storybook -p 9001 -c ./storybook/.storybook"
+    "build": "webpack --mode=development",
+    "build-prod": "webpack --mode=production",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
@@ -19,8 +21,6 @@
   },
   "homepage": "https://github.com/sunilab/atoms#readme",
   "devDependencies": {
-    "@storybook/addon-info": "^3.4.10",
-    "@storybook/react": "^3.4.10",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -29,9 +29,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "jest": "^23.5.0",
-    "storybook-addon-styled-component-theme": "^1.0.5",
+    "react-styleguidist": "^7.3.8",
     "styled-components": "^3.4.5",
-    "webpack": "^3.12.0",
+    "webpack": "^4.19.0",
     "webpack-cli": "^3.1.0"
   },
   "peerDependencies": {

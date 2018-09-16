@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-    devtool: 'cheap-module-source-map',
+    devtool: 'cheap-eval-source-map',
     entry: './src/index.js',
     externals: {
         'styled-components': {

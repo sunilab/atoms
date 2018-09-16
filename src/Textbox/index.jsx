@@ -41,8 +41,11 @@ class Textbox extends Component {
 
 Textbox.displayName = 'Textbox';
 
-Textbox = styled(Textbox)`
-    background-color: ${props => props.theme.colors.altHigh};
+/*
+Textbox = styled(Textbox).attrs({
+    hasTheme: props => props.theme ? true : false
+})`
+    background-color: ${props => props.hasTheme ? props.theme.colors.altHigh : 'transparent'};
     border: solid 2px ${props => props.theme.colors.baseMediumLow};
     box-sizing: border-box;
     color: ${props => props.theme.colors.baseMedium};
@@ -61,14 +64,37 @@ Textbox = styled(Textbox)`
         color: ${props => props.theme.colors.chromeBlackHigh};
     }
 `;
+*/
+
+Textbox = styled(Textbox)`
+    background-color: ${props => props.theme.colors ? props.theme.colors.altHigh : 'initial'};
+    border: solid 2px ${props => props.theme.colors ? props.theme.colors.baseMediumLow : 'initial'};
+    box-sizing: border-box;
+    color: ${props => props.theme.colors ? props.theme.colors.baseMedium : 'initial'};
+    font-family: ${props => props.theme.fonts ? props.theme.fonts.body.family : 'initial'};
+    font-size: ${props => props.theme.fonts ? props.theme.fonts.body.size : 'initial'};
+    font-weight: ${props => props.theme.fonts ? props.theme.fonts.body.weight : 'initial'};
+    line-height: ${props => props.theme.fonts ? props.theme.fonts.body.lineHeight : 'initial'};
+    outline: none;
+    padding: 0px 12px 0px 12px;
+    // Extend the textbox as much as it can, users can enclose it in a parent to restrict the width
+    width: 100%;
+
+    &:focus {
+        background-color: ${props => props.theme.colors ? props.theme.colors.chromeWhite : 'initial'};
+        border: solid 2px ${props => props.theme.colors ? props.theme.colors.listAccentHigh : 'initial'};
+        color: ${props => props.theme.colors ? props.theme.colors.chromeBlackHigh : 'initial'};
+    }
+`;
 
 Textbox.propTypes = {
     /** Function called when there is a change in the value entered in the component. */
     changeHandler: PropTypes.func,
     /** Hint for the user what can be entered in the textbox. */
     placeholder: PropTypes.string,
-    /** Can be one of 'text' or 'password' */
-    type: PropTypes.oneOf(['text', 'password'])
+    /** If password is set to true, the textbox works as a password else it acts as a textbox. */
+    password: PropTypes.bool
 };
 
+/** @Component */
 export default Textbox;

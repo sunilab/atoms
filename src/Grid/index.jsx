@@ -25,4 +25,5 @@ import Grid from './Grid';
 import GridRow from './GridRow';
 import GridColumn from './GridColumn';
 
+/** @Component */
 export { Grid, GridRow, GridColumn };
