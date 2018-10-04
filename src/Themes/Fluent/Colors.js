@@ -1,4 +1,7 @@
-const colors = {
+/**
+ * Fluent design language color palette
+ */
+export default {
     dark: {
         baseLow: 'rgba(255, 255, 255, 0.2)',
         baseMediumLow: 'rgba(255, 255, 255, 0.4)', // disabled UI but also borders
@@ -43,120 +46,4 @@ const colors = {
         chromeBlackHigh: 'rgba(0, 0, 0, 1)',
         chromeWhite:  'rgba(255, 255, 255, 1)'
     }
-};
-
-let fluentFonts = 'Segoe UI';
-const defaultTheme = {
-    name: "FLUENT-LIGHT",
-    colors: colors.light,
-    fonts: {
-		caption: {
-			family: fluentFonts,
-			size: '0.8rem',
-			weight: 400,
-			lineHeight: '0.93rem'
-		},
-		body: {
-			family: fluentFonts,
-			size: '1rem',
-			weight: 400,
-			lineHeight: '1.33rem'
-		},
-		base: {
-			family: fluentFonts,
-			size: '1rem',
-			weight: 600,
-			lineHeight: '1.33rem'
-		},
-		subtitle: {
-			family: fluentFonts,
-			size: '1.33rem',
-			weight: 400,
-			lineHeight: '1.6rem'
-		},
-		title: {
-			family: fluentFonts,
-			size: '1.6rem',
-			weight: 300,
-			lineHeight: '1.87rem'
-		},
-		subHeader: {
-			family: fluentFonts,
-			size: '2.27rem',
-			weight: 200,
-			lineHeight: '2.67rem'
-		},
-		header: {
-			family: fluentFonts,
-			size: '3.07rem',
-			weight: 200,
-			lineHeight: '3.73rem'
-		}
-	}
-};
-
-const darkTheme = {
-    name: "FLUENT-DARK",
-    colors: colors.dark,
-    fonts: {
-		caption: {
-			family: fluentFonts,
-			size: '0.8rem',
-			weight: 400,
-			lineHeight: '0.93rem'
-		},
-		body: {
-			family: fluentFonts,
-			size: '1rem',
-			weight: 400,
-			lineHeight: '1.33rem'
-		},
-		base: {
-			family: fluentFonts,
-			size: '1rem',
-			weight: 600,
-			lineHeight: '1.33rem'
-		},
-		subtitle: {
-			family: fluentFonts,
-			size: '1.33rem',
-			weight: 400,
-			lineHeight: '1.6rem'
-		},
-		title: {
-			family: fluentFonts,
-			size: '1.6rem',
-			weight: 300,
-			lineHeight: '1.87rem'
-		},
-		subHeader: {
-			family: fluentFonts,
-			size: '2.27rem',
-			weight: 200,
-			lineHeight: '2.67rem'
-		},
-		header: {
-			family: fluentFonts,
-			size: '3.07rem',
-			weight: 200,
-			lineHeight: '3.73rem'
-		}
-	}
-};
-
-const Material = {
-    light: {
-
-    },
-    dark: {
-
-    }
-};
-
-module.exports = {
-    Fluent: {
-        light: defaultTheme,
-        dark: darkTheme
-    },
-    Material: Material
 };
