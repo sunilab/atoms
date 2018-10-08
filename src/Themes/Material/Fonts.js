@@ -1,4 +1,4 @@
-const defaultFonts = 'Segoe UI';
+const defaultFonts = 'Roboto';
 export default {
     caption: {
         family: defaultFonts,
@@ -10,7 +10,7 @@ export default {
         family: defaultFonts,
         size: '1rem',
         weight: 400,
-        lineHeight: '1.33rem'
+        lineHeight: '1.5rem'
     },
     base: {
         family: defaultFonts,

@@ -1,5 +1,5 @@
-import FluentTheme from './FluentTheme';
-import MaterialTheme from './MaterialTheme';
+import FluentTheme from './Fluent';
+import MaterialTheme from './Material';
 
 export {
     FluentTheme,

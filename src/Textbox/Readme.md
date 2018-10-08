@@ -1,39 +1,59 @@
-Auto themed Textbox example
+### Auto themed Textbox example
 
 ```js
 var Textbox = require('./index').default;
-<Textbox/>
+var Label = require('../Label/index').default;
+
+initialState = { inputText: null };
+
+function handleTextboxChange (value) {
+    setState({
+        inputText: value
+    });
+}
+<div>
+    <Textbox changeHandler={handleTextboxChange}/>
+    <br/>
+    <Label text={state.inputText}/>
+</div>
 ```
 
-Base Textbox example
+### Base Textbox example
 
 ```js
 var Textbox = require('./index').Base;
 <Textbox/>
 ```
 
-Fluent Textbox example
+### Fluent Textbox example
 
 ```js
 var Textbox = require('./index').Fluent;
 <Textbox/>
 ```
 
-Material Textbox example
+### Material Textbox example
 
 ```js
 var Textbox = require('./index').Material;
 <Textbox/>
 ```
 
-iOS Textbox example
+#### Disabled
+```js
+var Textbox = require('./index').Material;
+<Textbox disabled={true}/>
+```
+
+
+### iOS Textbox example
 
 ```js
 var Textbox = require('./index').Apple;
 <Textbox/>
 ```
 
-Custom Textbox example
+### Custom Textbox example
 
 ```js
 var styled = require('styled-components').default;
