@@ -1,8 +1,15 @@
-import { FluentTheme, MaterialTheme } from '../Themes';
+import { FluentTheme, MaterialTheme, iOSTheme } from '../Themes';
 
 export default {
     ios: `
         background-color: rgba(255, 0, 0, 0.5);
+        border: none;
+        font-family: ${iOSTheme.light.fonts.body.family};
+        font-size: ${iOSTheme.light.fonts.body.size};
+        font-weight: ${iOSTheme.light.fonts.body.weight};
+        line-height: ${iOSTheme.light.fonts.body.lineHeight};
+        outline: none;
+        padding: 12px 16px 12px 16px;
     `,
     fluent: `
         background-color: ${FluentTheme.light.colors.altHigh};

@@ -27,7 +27,6 @@ export default class ThemeWrapper extends React.Component {
         let backgroundColor = (this.state.theme == 'fluent-dark' ? 'rgba(0, 0, 0, 1)' : 'rgba(255, 255, 255, 1)');
         function getBackgroundStyle () {
             return {
-                padding: '60px',
                 backgroundColor: backgroundColor
             }
         }
@@ -41,7 +40,7 @@ export default class ThemeWrapper extends React.Component {
                             <option value='fluent-dark'>Fluent Dark</option>
                         </select>
                     </div>
-                    <div style={getBackgroundStyle()}>
+                    <div name='exampleWrapper' style={getBackgroundStyle()}>
                         {this.props.children}
                     </div>
                 </div>

@@ -25,6 +25,10 @@ module.exports = {
                 {
                     test: /\.svg$/,
                     loader: 'url-loader'
+                },
+                {
+                    test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+                    use: "url-loader?limit=100000&mimetype=application/octet-stream"
                 }
             ]
         },
@@ -38,5 +42,13 @@ module.exports = {
         transforms: {
             dangerousTaggedTemplateString: true
         }
-    }
+    },
+    theme: {
+        fontFamily: {
+            base: 'Poppins'
+        }
+    },
+    require: [
+        path.join(__dirname, 'styleguide/CustomStyles.css')
+    ]
 };
